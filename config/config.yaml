@@ -1,0 +1,33 @@
+
+# Global configuration for experiments and backtests
+seed: 42
+artifacts_dir: artifacts
+
+market:
+  symbol: MES
+  tz: America/Chicago
+  # tick size and value are placeholders; set to real contract specs when using live data
+  tick_size: 0.25
+  tick_value: 1.25  # micro ES: $1.25 per tick
+
+backtest:
+  start: 2022-01-01
+  end: 2022-12-31
+  bar_interval: 1min
+  fees_per_contract: 1.20   # commissions + exchange approximate
+  slippage_ticks: 1
+
+strategy:
+  name: breakout_atr
+  lookback: 20
+  atr_period: 14
+  atr_mult_stop: 2.0
+  vol_target_annual: 0.10  # 10% annualized vol target
+
+data:
+  path: data/MES_2022_1min.csv   # or .parquet
+  tz: UTC                        # UTC recommended; use 'America/Chicago' if local
+  rth_only: true                 # keep only 08:30–15:00 CT
+  rth_start: "08:30"
+  rth_end: "15:00"
+

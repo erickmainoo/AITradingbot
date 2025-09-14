@@ -1,0 +1,20 @@
+ib:
+  host: 127.0.0.1
+  port: 7497          # 7497=Paper, 7496=Live
+  client_id: 123
+
+market:
+  symbol: MNQ
+  exchange: CME
+  timezone: America/Chicago
+  rth_only: true
+  rth_start: "08:30"
+  rth_end: "15:00"
+
+strategy:
+  name: breakout_atr
+  lookback: 20
+
+risk:
+  max_contracts: 1
+  flatten_at_end: true

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "AITradingbot",
+			"path": "../AITradingbot"
+		},
+		{
+			"name": "ai-futures-bot-starter",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

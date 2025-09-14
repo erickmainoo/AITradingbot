@@ -1,0 +1,17 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+.pytest_cache/
+.ipynb_checkpoints/
+# Data & artifacts
+data/*
+!data/README.md
+artifacts/
+mlruns/
+# OS
+.DS_Store
